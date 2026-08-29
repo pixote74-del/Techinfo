@@ -1,0 +1,261 @@
+:root {
+  --bg-dark: #0a0b10;
+  --bg-card: #12141d;
+  --primary: #6c5ce7;
+  --primary-glow: rgba(108, 92, 231, 0.4);
+  --accent: #00cec9;
+  --text-main: #f5f6fa;
+  --text-muted: #a4b0be;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 10%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+  padding: 8rem 10% 4rem;
+  text-align: center;
+  background: radial-gradient(circle at 50% 20%, #1e1346 0%, transparent 60%);
+}
+
+.badge {
+  background: rgba(108, 92, 231, 0.2);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin: 1.5rem 0;
+  line-height: 1.1;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+/* Botões */
+.btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  border: none;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 0 20px var(--primary-glow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px var(--primary-glow);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-left: 1rem;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Cards / Features */
+.container {
+  padding: 5rem 10%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 0.8rem;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  background: rgba(0, 206, 201, 0.1);
+  color: var(--accent);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* Stats */
+.stats-section {
+  background: #06070a;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 3rem;
+  color: var(--accent);
+}
+
+/* CTA & Form */
+.cta-section {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+input[type="email"] {
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--bg-card);
+  color: #fff;
+  width: 300px;
+  outline: none;
+}
+
+.feedback-msg {
+  margin-top: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 12px;
+  max-width: 450px;
+  border: 1px solid var(--primary);
+  position: relative;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
